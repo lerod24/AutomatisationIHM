@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.3 on win32)" generated="2024-07-11T23:38:10.607763" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Developpement\IHM\tests">
+<suite id="s1-s1" name="Main" source="C:\Developpement\IHM\tests\main.robot">
+<kw name="begin web test" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-11T23:38:11.072440" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-11T23:38:11.072440" elapsed="3.180086"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-11T23:38:14.252526" elapsed="0.107753"/>
+</kw>
+<status status="PASS" start="2024-07-11T23:38:11.072440" elapsed="3.288614"/>
+</kw>
+<test id="s1-s1-t1" name="Voir Produits Disponibles" line="10">
+<kw name="charger la page web" owner="PageAccueil">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-07-11T23:38:14.363068" level="INFO">Opening url 'https://www.google.com/'</msg>
+<arg>${GOOGLE_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-07-11T23:38:14.363068" elapsed="1.032147"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Google</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-11T23:38:15.396342" elapsed="0.060600"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-11T23:38:15.456942" level="INFO">Clicking element 'xpath=//*[@id="L2AGLb"]/div'.</msg>
+<arg>xpath=//*[@id="L2AGLb"]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-11T23:38:15.456942" elapsed="0.164245"/>
+</kw>
+<status status="PASS" start="2024-07-11T23:38:14.363068" elapsed="1.258119"/>
+</kw>
+<kw name="chercher le site web" owner="PageAccueil">
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>name=q</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-11T23:38:15.622184" elapsed="0.080689"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-11T23:38:15.702873" level="INFO">Typing text 'amazon' into text field 'name=q'.</msg>
+<arg>name=q</arg>
+<arg>amazon</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-11T23:38:15.702873" elapsed="0.173021"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-11T23:38:15.875894" level="INFO">Clicking element 'name=btnK'.</msg>
+<arg>name=btnK</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-11T23:38:15.875894" elapsed="0.269161"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Images</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-11T23:38:16.145055" elapsed="1.695326"/>
+</kw>
+<status status="PASS" start="2024-07-11T23:38:15.622184" elapsed="2.219042"/>
+</kw>
+<kw name="Naviguer vers le site amazon" owner="PageAccueil">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-11T23:38:17.842241" level="INFO">Clicking element 'xpath=//*[@id="rso"]/div[1]/div/div/div/div/div/div/div/div[1]/div/span/a/h3'.</msg>
+<arg>xpath=//*[@id="rso"]/div[1]/div/div/div/div/div/div/div/div[1]/div/span/a/h3</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-11T23:38:17.842241" elapsed="1.790171"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2024-07-11T23:38:24.924034" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-64.png"&gt;&lt;img src="selenium-screenshot-64.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-07-11T23:38:24.924034" level="FAIL">Text 'commandes' did not appear in 5 seconds.</msg>
+<arg>commandes</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2024-07-11T23:38:19.632412" elapsed="5.301747">Text 'commandes' did not appear in 5 seconds.</status>
+</kw>
+<status status="FAIL" start="2024-07-11T23:38:17.842241" elapsed="7.091918">Text 'commandes' did not appear in 5 seconds.</status>
+</kw>
+<kw name="Rechercher le produit" owner="PageAccueil">
+<status status="NOT RUN" start="2024-07-11T23:38:24.934159" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-07-11T23:38:14.361054" elapsed="10.573105">Text 'commandes' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-s1-t2" name="Choisir son produit" line="16">
+<kw name="choisir Produit Interessant" owner="PageProduit">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-07-11T23:38:24.939174" level="INFO">Clicking link 'xpath=//*[@id="search"]/div[1]/div[1]/div/span[1]/div[1]/div[3]/div/div/div/div/span/div/div/div[3]/div[1]/h2/a'.</msg>
+<msg time="2024-07-11T23:38:25.051762" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-65.png"&gt;&lt;img src="selenium-screenshot-65.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-07-11T23:38:25.051762" level="FAIL">Link with locator 'xpath=//*[@id="search"]/div[1]/div[1]/div/span[1]/div[1]/div[3]/div/div/div/div/span/div/div/div[3]/div[1]/h2/a' not found.</msg>
+<arg>xpath=//*[@id="search"]/div[1]/div[1]/div/span[1]/div[1]/div[3]/div/div/div/div/span/div/div/div[3]/div[1]/h2/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="FAIL" start="2024-07-11T23:38:24.939174" elapsed="0.117565">Link with locator 'xpath=//*[@id="search"]/div[1]/div[1]/div/span[1]/div[1]/div[3]/div/div/div/div/span/div/div/div[3]/div[1]/h2/a' not found.</status>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Ajouter au panier</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2024-07-11T23:38:25.056739" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-07-11T23:38:24.939174" elapsed="0.117565">Link with locator 'xpath=//*[@id="search"]/div[1]/div[1]/div/span[1]/div[1]/div[3]/div/div/div/div/span/div/div/div[3]/div[1]/h2/a' not found.</status>
+</kw>
+<kw name="Cliquer Sur Liste Deroulante" owner="PageProduit">
+<status status="NOT RUN" start="2024-07-11T23:38:25.056739" elapsed="0.000000"/>
+</kw>
+<kw name="PageProduit.Naviguer vers le site amazon">
+<status status="NOT RUN" start="2024-07-11T23:38:25.056739" elapsed="0.000000"/>
+</kw>
+<kw name="PageProduit.Rechercher le produit">
+<status status="NOT RUN" start="2024-07-11T23:38:25.056739" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-07-11T23:38:24.939174" elapsed="0.117565">Link with locator 'xpath=//*[@id="search"]/div[1]/div[1]/div/span[1]/div[1]/div[3]/div/div/div/div/span/div/div/div[3]/div[1]/h2/a' not found.</status>
+</test>
+<kw name="End web test" owner="common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-11T23:38:25.056739" elapsed="2.360719"/>
+</kw>
+<status status="PASS" start="2024-07-11T23:38:25.056739" elapsed="2.360719"/>
+</kw>
+<status status="FAIL" start="2024-07-11T23:38:10.658059" elapsed="16.759399"/>
+</suite>
+<status status="FAIL" start="2024-07-11T23:38:10.607763" elapsed="16.817228"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s1" name="Main">Tests.Main</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-07-11T23:38:11.067535" level="ERROR">Error in file 'C:\Developpement\IHM\Resources\PO\PageProduit.robot' on line 2: Importing library 'seleniumlibrary' failed: ModuleNotFoundError: No module named 'seleniumlibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\rodri\AppData\Local\Programs\Python\Python312\Scripts\robot.exe
+  C:\Users\rodri\AppData\Local\Programs\Python\Python312\python312.zip
+  C:\Users\rodri\AppData\Local\Programs\Python\Python312\DLLs
+  C:\Users\rodri\AppData\Local\Programs\Python\Python312\Lib
+  C:\Users\rodri\AppData\Local\Programs\Python\Python312
+  C:\Users\rodri\AppData\Roaming\Python\Python312\site-packages
+  C:\Users\rodri\AppData\Local\Programs\Python\Python312\Lib\site-packages</msg>
+</errors>
+</robot>
